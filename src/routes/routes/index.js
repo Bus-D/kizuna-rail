@@ -4,19 +4,21 @@ import listRoutesPage from '../list.js';
 import routeDetailsPage from './details.js';
 import { Router } from 'express';
 
-const router = Router();
+const railRoutesRouter = Router();
 
 // List all routes
-router.get('/', listRoutesPage);
+railRoutesRouter.get('/', listRoutesPage);
 
-// Route details page
-router.get('/:routeId', routeDetailsPage);
+
 
 // Book ticket
-router.get('/booking/:scheduleId', bookingPage);
-router.post('/book', processBookingRequest);
+railRoutesRouter.post('/book', processBookingRequest);
+railRoutesRouter.get('/booking/:scheduleId', bookingPage);
+
+// Route details page
+railRoutesRouter.get('/:routeId', routeDetailsPage);
 
 // Booking confirmation page
-router.get('/confirmation/:confirmationId', confirmationPage);
+railRoutesRouter.get('/confirmation/:confirmationId', confirmationPage);
 
-export default router;
+export default railRoutesRouter;

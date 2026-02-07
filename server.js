@@ -1,7 +1,7 @@
 import express from 'express';
 import globalMiddleware from './src/middleware/global.js';
 import Path from 'path';
-import routes from './src/routes/routes/index.js';
+import routes from './src/routes/router.js';
 import pkg from './package.json' with { type: 'json' };
 import { fileURLToPath } from 'url';
 import { initializeDatabase } from './src/models/db-in-file.js';
@@ -79,7 +79,8 @@ app.use((err, req, res, next) => {
     const context = {
         title: status === 404 ? 'Page Not Found' : 'Server Error',
         error: err.message,
-        stack: err.stack
+        stack: err.stack,
+        NODE_ENV
     };
 
     // Render the appropriate error template

@@ -6,7 +6,7 @@
     <select id="region-filter">
         <option value="all">All Regions</option>
         <% regions.forEach((region) => { %>
-            <option value="<%= region %>" <%= query.region === region ? 'selected' : '' %>><%= region.charAt(0).toUpperCase() + region.slice(1) %></option>
+            <option value="<%= region %>" <%= selectedRegion === region ? 'selected' : '' %>><%= region.charAt(0).toUpperCase() + region.slice(1) %></option>
         <% }); %>
     </select>
 
@@ -14,7 +14,7 @@
     <select id="season-filter">
         <option value="all">Any Season</option>
         <% seasons.forEach((season) => { %>
-            <option value="<%= season %>" <%= query.season === season ? 'selected' : '' %>><%= season.charAt(0).toUpperCase() + season.slice(1) %></option>
+            <option value="<%= season %>" <%= selectedSeason === season ? 'selected' : '' %>><%= season.charAt(0).toUpperCase() + season.slice(1) %></option>
         <% }); %>
     </select>
 </div>
