@@ -33,13 +33,6 @@ export const getRoutesByMonth = async (month) => {
     return db().routes.filter(route => route.operatingMonths.includes(month));
 };
 
-export const getAbbreviatedMonth = (monthNumber) => {
-    console.log('Month NUmber:', monthNumber);
-    const date = new Date(2026, monthNumber -1, 1);
-    const abbreviatedMonth = new Intl.DateTimeFormat('en-US', { month: 'short' }).format(date);
-    return abbreviatedMonth;
-}
-
 export const getRoutesByDuration = async () => {
     return [...db().routes].sort((a, b) => {
         const aDuration = parseFloat(a.duration);

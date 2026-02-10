@@ -1,5 +1,3 @@
-import { getAbbreviatedMonth } from '../models/model.js';
-
 /**
  * Helper function to set all expected res.locals values
  */

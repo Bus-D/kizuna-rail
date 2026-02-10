@@ -7,7 +7,6 @@ export default async (req, res, next) => {
     details.schedules = await getSchedulesByRoute(routeId);
 
 const getAbbreviatedMonth = (monthNumber) => {
-    console.log('Month NUmber:', monthNumber);
     const date = new Date(2026, monthNumber -1, 1);
     const abbreviatedMonth = new Intl.DateTimeFormat('en-US', { month: 'short' }).format(date);
     return abbreviatedMonth;
