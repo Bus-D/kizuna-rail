@@ -407,13 +407,141 @@ article.confirmation-page {
 
 @media print {
     article.confirmation-page {
-        .confirmation-actions {
-            display: none;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    header,
+    footer,
+    .confirmation-actions {
+        display: none !important;
+    }
+
+    .section-title {
+        font-size: 2rem !important;
+    }
+
+    .confirmation-header {
+        background-color: var(--clr-primary-pale) !important;
+        min-height: auto !important;
+        padding: 10px 12px !important;
+        gap: 8px !important;
+        margin-bottom: 10px !important;
+
+        .success-icon svg {
+            height: 40px !important;
+            width: 40px !important;
         }
 
-        .confirmation-header {
-            background-color: white;
-            border: 2px solid var(--clr-primary);
+        .confirmation-title {
+            font-size: 1.3rem !important;
+        }
+        
+        .confirmation-message {
+            font-size: 0.9rem !important;
+        }
+
+        .booking-refernce {
+            padding: 6px 10px !important;
+            margin-top: 6px;
+        }
+
+        .reference-number {
+            font-size: 1.1rem !important;
+        }
+    }
+
+    .confirmation-content {
+        margin-bottom: 0px !important;
+        gap: 10px !important;
+
+        .booking-details {
+            .details-grid {
+                display: grid !important;
+                grid-template-columns: repeat(4, 1fr) !important;
+                gap: 10px!important;
+
+                .detail-card {
+                    gap: 40px !important; /* Horizontal gap between icon and text */
+                    padding: 3px 5px !important;
+
+                    .detail-icon {
+                        height: 10px !important;
+                        width: 10px !important;
+                        vertical-align: center !important;
+                    }
+
+                    .detail-label {
+                        font-size: 0.9rem !important;
+                    }
+
+                    .detail-value {
+                        font-size: 1rem !important;
+                    }
+                }
+            }
+        }
+    }
+
+    .passengers-info {
+
+        .passengers-list {
+            .passenger-info-card {
+                .passenger-header {
+                    h3 {
+                        font-size: 1.3rem !important;
+                    }
+                }
+
+                .passenger-detail {
+                    .passenger-label {
+                        font-size: 1.4rem !important;
+                    }
+
+                    .passenger-value {
+                        font-size: 1.2rem !important;
+                    } 
+                }
+            }
+        }
+    }
+
+    .next-steps {
+        .steps-list {
+            display: grid !important;
+            grid-template-columns: repeat(2, 1fr) !important;
+
+            .step-item {
+                .step-number {
+                    width: 20px !important;
+                    height: 20px !important;
+                }
+
+                .step-content {
+                    h3 {
+                        font-size: 1.1rem !important;
+                    }
+
+                    p {
+                        font-size: 0.9rem !important;
+                    }
+                }
+            }
+        }
+    }
+    
+
+    .important-info {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr) !important;
+        h3 {
+            font-size: 1.1rem !important;
+        }
+
+        ul {
+            li {
+                font-size: 0.9rem !important;
+            }
         }
     }
 }
